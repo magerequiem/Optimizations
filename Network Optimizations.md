@@ -37,3 +37,64 @@ Approximate round trip times in milli-seconds:
     Minimum = 35ms, Maximum = 39ms, Average = 37ms
 
 ```
+## Step 2 - DNS Configuration
+1. Settings App (Wind + I)
+
+**Path :**```ml
+Network & Internet > Advanced Network Settings
+Choose = Wifi/Ethernet > More Adaptor Options - edit
+Tab = Networking
+```**Configuration:**
+```yaml
+if :
+Client for Microsoft networks = :heavy_check_mark:
+Internet Protocol Version 4 = :heavy_check_mark:
+Internet Protocol Version 6 = :heavy_check_mark:
+
+else :
+Uncheck
+
+Internet Protocol Version 4 > Properties
+Tab = General > 
+Preferred DNS Server = 1.1.1.1 / 8.8.8.8
+Alternate DNS Server = 1.0.0.1 / 8.8.4.4
+
+Note : 
+if Preferred DNS Server = 1.1.1.1 then Alternate DNS Server = 1.0.0.1 
+else Preferred DNS Server = 8.8.8.8 then Alternate DNS Server = 8.8.4.4
+
+Tab = Networking
+Configure...
+Tab = Power Management
+Uncheck = "all"
+
+Tab = Advanced 
+Adaptive Inter-Frame Spacing = Disabled
+ARP Offload = Disabled
+Enable PME = Disabled
+Energy Effcient Ethernet = Off
+Flow Control = Disabled
+Gigabit Master Slave Mode = Auto Detect
+Gigaphit PHY Mode = Auto Detect
+Interupt Moderation = Disabled
+Interrupt Moderation Rate = Off
+Ipv4 Checksum Offload = Disabled
+Jumbo Packet = Disabled
+Large Send Offload V2(Ipv4) = Disabled
+Large Send Offload V2(Ipv6) = Disabled
+Logically Administered Adress = Not Present
+Log Link State Event = Disabled 
+Maximum Number of RSS Queues = 2 Queuse
+NS Offload = Disabled
+Packet Priority & VLAN = (sec opt) Enabled
+PTP Hardware TimeStamp = Disabled
+Recieve Buffers = 2048 / 1024 
+Recieve Side Scaling = Disabled
+Reduce Speed on Power Down = Disabled
+Software TimeStamps = Disabled 
+Speed & Duplex = Auto Negotiation / Highest Full Duplex
+TCP Checksum Offload(Ipv4) = Disabled
+TCP Checksum Offload(Ipv6) = Disabled
+Transmit Buffers = 2048 if Recieve buffers same else 2x Receive Buffers
+Rest all Disabled....
+```
